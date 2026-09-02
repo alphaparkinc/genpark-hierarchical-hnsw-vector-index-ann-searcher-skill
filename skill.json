@@ -1,0 +1,41 @@
+{
+  "name": "genpark-hierarchical-hnsw-vector-index-ann-searcher-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Hierarchical Navigable Small World (HNSW) vector index ANN searcher delivering sub-millisecond similarity lookups with high recall.",
+  "author": "genpark",
+  "category": "vector-search",
+  "tags": [
+    "hnsw",
+    "vector-search",
+    "approximate-nearest-neighbors",
+    "ann-index",
+    "dense-embeddings"
+  ],
+  "inputs": {
+    "query_dense_vector_dim": {
+      "type": "integer"
+    },
+    "top_k_neighbors": {
+      "type": "integer"
+    },
+    "ef_search_depth": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "search_operation_id": {
+      "type": "string"
+    },
+    "query_latency_micros": {
+      "type": "integer"
+    },
+    "recall_rate_estimate_pct": {
+      "type": "number"
+    },
+    "vector_index_manifest_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
